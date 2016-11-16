@@ -14,6 +14,6 @@ app.use(bodyParser.urlencoded({extended: true }));
 app.post("/keitaiso", keitaiso);
 
 app.listen(3000, function () {
-  console.log("＜サーバ起動＞")
-  console.log("http://localhost:3000/index.html へアクセスしてください。")
+  console.log("＜サーバ起動＞");
+  console.log("http://localhost:3000/index.html へアクセスしてください。");
 });
