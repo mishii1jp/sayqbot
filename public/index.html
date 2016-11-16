@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="ja" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>kuromoji</title>
+        <link rel="stylesheet" href="css/tekito-.css">
+        <script src="//code.angularjs.org/1.5.7/angular.min.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body ng-controller="MyController">
+        <div class="title">
+            <span>kuromoji sample</span>
+        </div>
+        <div class="panel">
+            <div class="panel-input">
+                <label>入力：<input type="text" name="testwords" ng-model="testwords" size="100" placeholder="文字列を入力"></label>
+                <button class="" ng-click="sendTxt();">解析する</button>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-title">
+                <span>解析結果</span>
+            </div>
+            <table class="panel-table">
+                <thead>
+                    <tr>
+                        <th>単語</th>
+                        <th>登録有無</th>
+                        <th>品詞</th>
+                        <th>活用形</th>
+                        <th>基本型</th>
+                        <th>読み仮名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="result in results">
+                        <td>{{result.surface_form}}</td>
+                        <td>{{result.word_type}}</td>
+                        <td>{{result.pos}}</td>
+                        <td>{{result.conjugated_form}}</td>
+                        <td>{{result.basic_form}}</td>
+                        <td>{{result.reading}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
