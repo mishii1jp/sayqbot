@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true }));
 
 //形態素解析結果取得
-app.post("/keitaiso", keitaiso);
+app.use("/keitaiso", keitaiso);
 
 app.listen(3000, function () {
   console.log("＜サーバ起動＞");
