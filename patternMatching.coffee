@@ -4,7 +4,7 @@ class @PatternMatching
     matching : (param) ->
 
         # FAQのデータセットを取得
-        faqs = require '../resource/faqdata_securitycard.json'
+        faqs = require './resource/faqdata_securitycard.json'
         faqArray = faqs.questions
         # Hubotから取ってくる
         targetWord = param
